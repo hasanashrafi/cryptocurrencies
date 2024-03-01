@@ -1,5 +1,4 @@
 class UI {
-
     // Print All message need to show
     printMessage(message, className) {
         // creat div
@@ -12,11 +11,9 @@ class UI {
         const result = document.querySelector('.messages')
         // append div to the result
         result.appendChild(div)
-
         // remove message after 3second
         this.removeMessage()
     }
-
     // remove message after 3second
     removeMessage() {
         setTimeout(() => {
@@ -31,8 +28,6 @@ class UI {
         if (prevResult) {
             prevResult.remove()
         }
-
-
         // check the name of currency
         let currencyName;
         if (currency == 'USD') {
@@ -44,8 +39,6 @@ class UI {
         if (currency == 'EUR') {
             currencyName = 'Euro'
         }
-
-
         // create template for show
         let HTMLTemplate = `
             <div class= "card cyan darken-3">
@@ -64,9 +57,7 @@ class UI {
         this.showSpinner()
         // show the result after spinner
         this.showResult(HTMLTemplate)
-
     }
-
     // show spinner before showing result
     showSpinner() {
         const spinnerGif = document.createElement('img')
@@ -74,13 +65,11 @@ class UI {
         // append spinner to html
         document.querySelector('.spinner').appendChild(spinnerGif)
     }
-
     // showing the result of api
     showResult(HTMLTemplate) {
         setTimeout(() => {
             // remove spinner
             document.querySelector('.spinner img').remove()
-
             // access to the result tag
             const resultDiv = document.querySelector('#result')
             // append to the resultDiv
